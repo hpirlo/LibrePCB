@@ -1119,6 +1119,15 @@ public:
       {QKeySequence(Qt::CTRL + Qt::Key_M)},
       &categoryTools,
   };
+  EditorCommand toolImage{
+      "tool_image",  // clang-format break
+      QT_TR_NOOP("Add Image"),
+      QT_TR_NOOP("Add a new image to the schematic sheet"),
+      QIcon(":/img/actions/add_image.png"),
+      EditorCommand::Flags(),
+      {QKeySequence(Qt::CTRL + Qt::Key_I)},
+      &categoryTools,
+  };
 
   EditorCommandCategory categoryCommands{
       "categoryCommands", QT_TR_NOOP("Commands"), true, &categoryRoot};

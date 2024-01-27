@@ -562,6 +562,7 @@ void SchematicEditor::createActions() noexcept {
   mActionToolText.reset(cmd.toolText.createAction(this));
   mActionToolComponent.reset(cmd.toolComponent.createAction(this));
   mActionToolMeasure.reset(cmd.toolMeasure.createAction(this));
+  mActionToolImage.reset(cmd.toolMeasure.createAction(this));
   mActionComponentResistor.reset(
       cmd.componentResistor.createAction(this, this, [this]() {
         Uuid componentUuid =
@@ -736,6 +737,7 @@ void SchematicEditor::createToolBars() noexcept {
   mToolBarTools->addAction(mActionToolComponent.data());
   mToolBarTools->addSeparator();
   mToolBarTools->addAction(mActionToolMeasure.data());
+  mToolBarTools->addAction(mActionToolImage.data());
   addToolBar(Qt::LeftToolBarArea, mToolBarTools.data());
 
   // Components.
@@ -896,6 +898,7 @@ void SchematicEditor::createMenus() noexcept {
   mb.addAction(mActionToolComponent);
   mb.addSeparator();
   mb.addAction(mActionToolMeasure);
+  mb.addAction(mActionToolImage);
 
   // Help.
   mb.newMenu(&MenuBuilder::createHelpMenu);

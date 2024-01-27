@@ -75,6 +75,8 @@ public:
     ADD_TEXT,
     /// ::librepcb::editor::SchematicEditorState_Measure
     MEASURE,
+    /// ::librepcb::editor::SchematicEditorState_Measure
+    ADD_IMAGE,
   };
 
   /// FSM Context

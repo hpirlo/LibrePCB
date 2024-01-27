@@ -220,6 +220,7 @@ private:
   QScopedPointer<QAction> mActionToolText;
   QScopedPointer<QAction> mActionToolComponent;
   QScopedPointer<QAction> mActionToolMeasure;
+  QScopedPointer<QAction> mActionToolImage;
   QScopedPointer<QAction> mActionComponentResistor;
   QScopedPointer<QAction> mActionComponentInductor;
   QScopedPointer<QAction> mActionComponentCapacitorBipolar;
